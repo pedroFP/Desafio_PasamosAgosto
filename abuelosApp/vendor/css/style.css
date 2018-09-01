@@ -1,0 +1,67 @@
+body{
+	font-size: 1.02rem;
+	font-family: 'Open Sans', sans-serif;
+
+}
+
+/*Nav*/
+.bg-dark {
+    background-color: #3E916E!important;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+	padding-right: 1.8rem;
+    color: #FFFFFF;
+}
+
+.navbar-expand-md .navbar-nav .nav-link:hover {
+	padding-right: 1.8rem;
+    color: #E7F4EE;
+}
+
+.contenedor_index{
+	background-color: #F2F2F2;
+	background-image: url('../images/Malones.png');
+	background-size: cover;
+	color: #FFFFFF;
+}
+
+
+/*Botones*/
+.btn-default{
+	background-color: #3E916E;
+	color: #FFFFFF;
+}
+
+a{
+	color: #FFFFFF;
+}
+
+a:hover{
+    color: #E7F4EE;
+
+}
+
+.lbl-ubicacion{
+	color: #3E916E;
+	font-size: 0.9rem;
+	font-weight: 900;
+}
+
+/*Footer*/
+.bg-footer{
+	background-color: #323031;
+	color: #FFFFFF;
+}
+
+.footer_desafio{
+	font-size: 0.9rem;
+	color: #FFFFFF;
+
+}
+
+.footer{
+	font-size: 0.9rem;
+	color: #EAEAEA;
+}
+

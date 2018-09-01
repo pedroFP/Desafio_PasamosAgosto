@@ -1,40 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div class="container-block contenedor_index py-5 mb-4">
+    <div class="col-lg-10 mx-auto">
+      <div class="row align-items-center h-100 mx-auto">
+        <div class="col-lg-8">
+          <h2 class="pt-4"><b>Malones Patiperros</b></h2>
+          <h5>Porque la diversión no tiene edad...</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+          <button class="btn btn-default"><a href="malones.html">¡Ver últimos Malones!</a></button>
+        </div>
+      </div>
+    </div>
+</div>
 
-<h1>Events</h1>
+<!-- Talleres -->
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-12 mx-auto mb-2 ">
+      <h3 class="pb-2 h3linea">Últimos <b>talleres</b> publicados</h3>
+    </div>
+    <div class="col-lg-8">
+      <p>Revisa los últimos talleres que han sido publicados y que están disponibles para inscripción.</p>
+    </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Title</th>
-      <th>Category</th>
-      <th>Date</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.name %></td>
-        <td><%= image_tag event.image.url %></td>
-        <td><%= event.title %></td>
-        <td><%= event.category %></td>
-        <td><%= event.date %></td>
-        <td><%= event.phone %></td>
-        <td><%= link_to 'Show', event %></td>
-
-        <% if current_user.id = event.user_id %>
-          <td><%= link_to 'Edit', edit_event_path(event) %></td>
-          <td><%= link_to 'Destroy', event, method: :delete %></td>
+    <div class="col-lg-12">
+      <div class="row justify-content-center">
+        <% @events.each do |event|%>
+        <div class="card m-3" style="width: 18rem;">
+          <img class="card-img-top" src="https://i0.wp.com/www.petruzzo.com/wp-content/uploads/2015/05/grandparents-dancing-at-wedding.jpg?ssl=1" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">T<%= event.title%></h5>
+            <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i>Santiago Centro</label>
+            <p class="card-text"><%= event.content %></p>
+            <%= link_to 'Ver más información', event, class: 'btn btn-default' %>
+          </div>
+        </div>
         <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      </div>
+    </div>
 
-<br>
+  </div>
+</div>
 
 <%= link_to 'New Event', new_event_path %>
