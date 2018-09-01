@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index]
-  attr_accessor 
+  before_action :authenticate_user!, except: [:index, :show]
+  attr_accessor
   # GET /events
   # GET /events.json
   def index
@@ -71,10 +71,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-<<<<<<< HEAD
       params.require(:event).permit(:content, :title, :category, :date, :phone, :user_id, :hour, :image)
-=======
-      params.require(:event).permit(:name, :title, :category, :date, :phone, :user_id, :image)
->>>>>>> BackEnd2
     end
 end

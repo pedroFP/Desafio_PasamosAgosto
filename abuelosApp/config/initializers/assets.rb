@@ -15,9 +15,5 @@ Rails.application.config.assets.paths << Rails.root.join('vendor','images')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
-<<<<<<< HEAD
-Rails.application.config.assets.precompile += %w( *.png )
-=======
-Rails.application.config.assets.precompile += %w( "*.jpg " )
+Rails.application.config.assets.precompile += %w( *.jpg *.png *jpeg  )
 Rails.application.config.assets.precompile += %w( logoBlanco.png )
->>>>>>> BackEnd2
