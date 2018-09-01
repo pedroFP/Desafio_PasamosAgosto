@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'events/talleres'
   get 'events/viajes'
   delete 'events/:id', to: 'events#destroy', as: 'destroy'
+  get 'events/contacto'
   resources :events
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

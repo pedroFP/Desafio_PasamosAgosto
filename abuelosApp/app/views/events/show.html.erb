@@ -1,7 +1,7 @@
 <div class="container py-5">
   <div class="row">
     <div class="col-lg-4">
-      <img class="img-fluid" src="<%= asset_path @event.image %>">
+      <img class="card-img" src="<%= asset_path @event.image %>">
     </div>
     <div class="col-lg-8">
       <h3>Malón Fiesta</h3>
@@ -12,13 +12,12 @@
       <p><%= @event.content %></p>
     </div>
   </div>
+  <%= link_to 'Back', events_path, class: "btn btn-primary btn-sm" %>
+
+  <% if user_signed_in? %>
+    <% if current_user.id == @event.user_id %>
+    <%= link_to 'Edit', edit_event_path, class: "btn btn-warning btn-sm" %>
+    <%= link_to 'Delete', destroy_path(@event), method: :delete, class: "btn btn-danger btn-sm" %>
+    <% end %>
+    <% end %>
 </div>
-
-<%= link_to 'Back', events_path, class: "btn btn-primary btn-sm" %>
-
-<% if user_signed_in? %>
-  <% if current_user.id == @event.user_id %>
-  <%= link_to 'Edit', edit_event_path, class: "btn btn-warning btn-sm" %>
-  <%= link_to 'Delete', destroy_path(@event), method: :delete, class: "btn btn-danger btn-sm" %>
-  <% end %>
-<% end %>
