@@ -1,33 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Descripción:</strong>
-  <%= @event.content %>
-</p>
 
-<p>
-<strong>Imagen</strong>
-<%= @event.image %>
-</p>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <p id="notice">Su Evento ha sido Creado</p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+      <p>
+      <strong>Imagen</strong>
+      <img src="<%= asset_path @event.image %>" alt="">
+      </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @event.category %>
-</p>
+      <p>
+      <strong>Título:</strong>
+      <%= @event.title %>
+      </p>
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
+      <p>
+       <strong>Descripción:</strong>
+       <%= @event.content %>
+      </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @event.phone %>
-</p>
+      <p>
+      <strong>Categoría:</strong>
+      <%= @event.category %>
+      </p>
 
-<%= link_to 'Back', events_path %>
+      <p>
+      <strong>Comuna:</strong>
+      <%= @event.address  %>
+      </p>
+
+      <p>
+      <strong>Fecha:</strong>
+      <%= @event.date %>
+      </p>
+
+      <p>
+      <strong>Telefono:</strong>
+      <%= @event.phone %>
+      </p>
+      <%= link_to 'Back', events_path , class: 'btn btn-success'%>
+    </div>
+  </div>
+</div>
