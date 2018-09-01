@@ -39,6 +39,14 @@ body{
 }
 
 /*Hipervinculos*/
+.page-link{
+	color: #914B3E;
+}
+
+.page-link:hover{
+	color: #814237;
+}
+
 a{
 	color: #3E916E;
 }
@@ -60,6 +68,11 @@ a:hover{
 	color: #3E916E;
 	font-size: 0.9rem;
 	font-weight: 900;
+}
+
+/*Icono*/
+.color-icono{
+	color: #347C5E;
 }
 
 /*Footer*/
