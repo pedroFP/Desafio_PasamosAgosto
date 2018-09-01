@@ -16,15 +16,7 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="row justify-content-center">
-        <div class="card m-3" style="width: 18rem;">
-          <img class="card-img-top img-fluid" src="http://cr.emedemujer.com/wp-content/uploads/sites/7/2016/02/ejercicio-adulto-mayor.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Viaje</h5>
-            <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i>Santiago Centro</label>
-            <p class="card-text">Taller de baile nivel principiante, especialmente diseñado para personas de la tercera edad.</p>
-            <a href="#" class="btn btn-default">Ver más información</a>
-          </div>
-        </div>
+        
         <% @events.each do |event|  %>
           <% if event.category == 'Viajes' %>
           <div class="card m-3" style="width: 18rem;">
