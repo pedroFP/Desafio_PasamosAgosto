@@ -38,6 +38,9 @@ body{
 	color: #FFFFFF;
 }
 
+.btn-default:hover{
+	background-color: #358262;
+}
 /*Hipervinculos*/
 .page-link{
 	color: #914B3E;
