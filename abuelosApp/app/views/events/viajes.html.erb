@@ -11,23 +11,23 @@
     </div>
 </div>
 
-<!-- Viajes -->
 <div class="container py-5">
   <div class="row">
     <div class="col-lg-12">
       <div class="row justify-content-center">
-        <% @events.each do |event|  %>
-          <% if event.category == 'Viajes' %>
-          <div class="card m-3" style="width: 18rem;">
-            <img class="card-img-top" src="<%= asset_path event.image%>" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><%= event.title %></h5>
-              <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i>Santiago Centro</label>
-              <p class="card-text"><%= event.content %></p>
-              <%= link_to 'Ver más información', event, class: 'btn btn-default' %>
-          <% end %>
+        <% @events.each do |event|%>
+        <% if event.category == 'Viajes' %>
+        <div class="card m-3" style="width: 18rem;">
+          <img class="card-img-top" src="<%= asset_path event.image %>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.title%></h5>
+            <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i>Santiago Centro</label>
+            <p class="card-text"><%= event.content %></p>
+            <%= link_to 'Ver más información', event, class: 'btn btn-default' %>
+          </div>
+        </div>
         <% end %>
-
+        <% end %>
       </div>
     </div>
   </div>
