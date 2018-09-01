@@ -8,7 +8,7 @@
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
           consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
-          <button class="btn btn-default"><a href="malones.html">¡Ver últimos Malones!</a></button>
+          <button class="btn btn-default"><a href="<%= events_malones_path %>">¡Ver últimos Malones!</a></button>
         </div>
       </div>
     </div>
@@ -21,7 +21,7 @@
       <h3 class="pb-2 h3linea">Últimos <b>talleres</b> publicados</h3>
     </div>
     <div class="col-lg-8">
-      <p>Revisa los últimos talleres que han sido publicados y que están disponibles para inscripción.</p>
+      <p>Revisa los últimos talleres que han sido publicados y que están disponibles para inscripción.</p><a href="<% events_talleres_path %>"><b>Ver lista de todos los talleres.</b></a></p>
     </div>
 
     <div class="col-lg-12">
@@ -31,8 +31,8 @@
         <div class="card m-3" style="width: 18rem;">
           <img class="card-img-top" src="<%= asset_path event.image %>" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title"><%= event.title%></h5>
-            <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i>Santiago Centro</label>
+            <h5 class="card-title">T<%= event.title%></h5>
+            <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i><%= event.address %></label>
             <p class="card-text"><%= event.content %></p>
             <%= link_to 'Ver más información', event, class: 'btn btn-default' %>
           </div>
@@ -48,7 +48,7 @@
           <h3 class="pb-2 h3linea">Últimos <b>malones</b> publicados</h3>
         </div>
         <div class="col-lg-12">
-          <p>Revisa los últimos malones que han sido publicados para que disfrutes y la pases muy bien. <a href="malones.html"><b>Ver lista de todos los malones.</b></a></p>
+          <p>Revisa los últimos malones que han sido publicados para que disfrutes y la pases muy bien. <a href="<% events_malones_path %>"><b>Ver lista de todos los malones.</b></a></p>
         </div>
         <div class="col-lg-12">
           <div class="row justify-content-center">
@@ -57,8 +57,8 @@
             <div class="card m-3" style="width: 18rem;">
               <img class="card-img-top" src="<%= asset_path event.image %>" alt="Card image cap">
               <div class="card-body">
-                <h5 class="card-title"><%= event.title%></h5>
-                <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i>Santiago Centro</label>
+                <h5 class="card-title"><%= event.title %></h5>
+                <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i><%= event.address %></label>
                 <p class="card-text"><%= event.content %></p>
                 <%= link_to 'Ver más información', event, class: 'btn btn-default' %>
               </div>
@@ -76,7 +76,7 @@
           <h3 class="pb-2 h3linea">Últimos <b>viajes</b> publicados</h3>
         </div>
         <div class="col-lg-12">
-          <p>Revisa los últimos viajes que han sido publicados y que están disponibles para reservar. <a href="viajes.html"><b>Ver lista de todos los viajes.</b></a></p>
+          <p>Revisa los últimos viajes que han sido publicados y que están disponibles para reservar. <a href="<% events_viajes_path %>"><b>Ver lista de todos los viajes.</b></a></p>
         </div>
         <div class="col-lg-12">
           <div class="row justify-content-center">
@@ -85,8 +85,8 @@
             <div class="card m-3" style="width: 18rem;">
               <img class="card-img-top" src="<%= asset_path event.image %>" alt="Card image cap">
               <div class="card-body">
-                <h5 class="card-title"><%= event.title%></h5>
-                <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i>Santiago Centro</label>
+                <h5 class="card-title"><%= event.title %></h5>
+                <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i><%= event.address %></label>
                 <p class="card-text"><%= event.content %></p>
                 <%= link_to 'Ver más información', event, class: 'btn btn-default' %>
               </div>
@@ -94,11 +94,10 @@
             <% end %>
             <% end %>
           </div>
+
         </div>
       </div>
+          <%= link_to 'New Event', new_event_path, class: 'btn btn-success' %>
     </div>
-
   </div>
 </div>
-
-<%= link_to 'New Event', new_event_path %>

@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<<<<<<< HEAD
 <p>
   <strong>Descripción:</strong>
   <%= @event.content %>
@@ -68,3 +69,49 @@
   <%= link_to 'Delete', destroy_path(@event), method: :delete, class: "btn btn-danger btn-sm" %>
   <% end %>
 <% end %>
+=======
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <p id="notice">Su Evento ha sido Creado</p>
+
+      <p>
+      <strong>Imagen</strong>
+      <img src="<%= asset_path @event.image %>" alt="">
+      </p>
+
+      <p>
+      <strong>Título:</strong>
+      <%= @event.title %>
+      </p>
+
+      <p>
+       <strong>Descripción:</strong>
+       <%= @event.content %>
+      </p>
+
+      <p>
+      <strong>Categoría:</strong>
+      <%= @event.category %>
+      </p>
+
+      <p>
+      <strong>Comuna:</strong>
+      <%= @event.address  %>
+      </p>
+
+      <p>
+      <strong>Fecha:</strong>
+      <%= @event.date %>
+      </p>
+
+      <p>
+      <strong>Telefono:</strong>
+      <%= @event.phone %>
+      </p>
+      <%= link_to 'Back', events_path , class: 'btn btn-success'%>
+    </div>
+  </div>
+</div>
+>>>>>>> BackEnd
