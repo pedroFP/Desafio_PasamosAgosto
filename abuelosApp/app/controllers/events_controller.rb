@@ -8,9 +8,25 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def malones
+    @events = Event.all
+  end
+
+  def talleres
+    @events = Event.all
+  end
+
+  def viajes
+    @events = Event.all
+  end
+
   # GET /events/1
   # GET /events/1.json
   def show
+  end
+
+  def categories
+    @events = Event.all
   end
 
   # GET /events/new
