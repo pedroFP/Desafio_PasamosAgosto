@@ -6,9 +6,6 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
-    @malones @events.where(:category == 'Malon')
-    @talleres = @events.where(:category == 'Taller')
-    @viajes = @events.where(:category == 'Viajes')
   end
 
   def malones
