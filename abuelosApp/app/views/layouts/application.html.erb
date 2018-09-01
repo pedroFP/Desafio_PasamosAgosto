@@ -5,12 +5,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <%= render 'layouts/navbar' %>
+<<<<<<< HEAD
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <% if user_signed_in? %>
@@ -20,6 +23,18 @@
       <%= link_to 'Login',new_user_session_path %>
       <%= link_to 'Sign Up', new_user_session_path %>
     <% end %>
+=======
+>>>>>>> BackEnd2
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
+
+<!-- <li class="nav-item dropdown">
+  <% if user_signed_in? %>
+    <%= link_to 'salir', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+  <% else %>
+    <%= link_to 'Login',new_user_session_path, class: 'nav-link' %>
+    <%= link_to 'Sign Up', new_user_session_path, class: 'nav-link' %>
+  <% end %>
+</li> -->

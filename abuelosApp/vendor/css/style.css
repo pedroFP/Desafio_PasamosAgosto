@@ -21,7 +21,7 @@ body{
 
 .contenedor_index{
 	background-color: #F2F2F2;
-	background-image: url('../images/Malones.png');
+	background-image: url('Malones');
 	background-size: cover;
 	color: #FFFFFF;
 }
@@ -64,4 +64,3 @@ a:hover{
 	font-size: 0.9rem;
 	color: #EAEAEA;
 }
-
