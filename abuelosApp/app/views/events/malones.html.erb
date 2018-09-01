@@ -1,0 +1,37 @@
+<!-- Info - Imagen -->
+<div class="container-fluid contenedor-titulo py-4 mb-4">
+    <div class="col-lg-10 mx-auto">
+      <div class="row align-items-center mx-auto">
+        <div class="col-lg-12">
+          <h3 class="pt-4">
+            <b>Malones Patiperros</b></h3>
+           <p>Los malones son instancias ideales para compartir y conocer gente, además de entretenerse. Aquí puedes ver todos los malones y fiestas que tenemos disponibles para que puedas ir y divertirte.</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Talleres -->
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="row justify-content-center">
+        <!--  -->
+        <% @events.each do |event|  %>
+          <% if event.category == 'Malon' %>
+          <div class="card m-3" style="width: 18rem;">
+            <img class="card-img-top" src="<%= asset_path event.image%>" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title"><%= event.title %></h5>
+              <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i>Santiago Centro</label>
+              <p class="card-text"><%= event.content %></p>
+              <%= link_to 'Ver más información', event, class: 'btn btn-default' %>
+          <% end %>
+        <% end %>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

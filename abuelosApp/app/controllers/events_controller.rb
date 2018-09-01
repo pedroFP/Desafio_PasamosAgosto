@@ -1,12 +1,27 @@
 # frozen_string_literal: true
 
 class EventsController < ApplicationController
-  before_action :set_event, only: %i[show edit update destroy]
-  before_action :authenticate_user!, except: %i[index show]
+  before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show, :malones, :talleres, :viajes]
   attr_accessor
   # GET /events
   # GET /events.json
   def index
+    @events = Event.all
+    @malones @events.where(:category == 'Malon')
+    @talleres = @events.where(:category == 'Taller')
+    @viajes = @events.where(:category == 'Viajes')
+  end
+
+  def malones
+    @events = Event.all
+  end
+
+  def talleres
+    @events = Event.all
+  end
+
+  def viajes
     @events = Event.all
   end
 
@@ -14,6 +29,10 @@ class EventsController < ApplicationController
   # GET /events/1.json
   def show
     @events = Event.find(params[:id])
+  end
+
+  def categories
+    @events = Event.all
   end
 
   # GET /events/new
