@@ -40,6 +40,18 @@ body{
 
 .btn-default:hover{
 	background-color: #358262;
+	color: #FFFFFF;
+}
+
+.btn-info{
+	background-color: #914B3E;
+	border-color: #914B3E;
+}
+
+.btn-info:hover{
+	background-color: #7c4035;
+	border-color: #7c4035;
+	
 }
 /*Hipervinculos*/
 .page-link{
@@ -47,7 +59,7 @@ body{
 }
 
 .page-link:hover{
-	color: #814237;
+	color: #7e4035;
 }
 
 a{
