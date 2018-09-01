@@ -31,6 +31,12 @@ body{
 	background-color: #F4F4F4;
 }
 
+.contenedor_subir{
+	background-image: url('../images/MalonesFondo.jpg');
+	background-size: cover;
+	color: #FFFFFF;
+
+}
 
 /*Botones*/
 .btn-default{
@@ -51,8 +57,13 @@ body{
 .btn-info:hover{
 	background-color: #7c4035;
 	border-color: #7c4035;
-	
+
 }
+
+.custom-file-input ~ .custom-file-label::after {
+    content: "Subir archivo...";
+}
+
 /*Hipervinculos*/
 .page-link{
 	color: #914B3E;
