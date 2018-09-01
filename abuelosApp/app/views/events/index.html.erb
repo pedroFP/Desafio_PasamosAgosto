@@ -28,7 +28,7 @@
       <div class="row justify-content-center">
         <% @events.each do |event|%>
         <div class="card m-3" style="width: 18rem;">
-          <img class="card-img-top" src="https://i0.wp.com/www.petruzzo.com/wp-content/uploads/2015/05/grandparents-dancing-at-wedding.jpg?ssl=1" alt="Card image cap">
+          <img class="card-img-top" src="<%= asset_path event.image %>" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">T<%= event.title%></h5>
             <label class="lbl-ubicacion"><i class="fas fa-map-marker-alt mr-2"></i>Santiago Centro</label>
