@@ -19,6 +19,7 @@ body{
     color: #E7F4EE;
 }
 
+/*Contenedores*/
 .contenedor_index{
 	background-color: #F2F2F2;
 	background-image: url('Malones');
@@ -26,6 +27,16 @@ body{
 	color: #FFFFFF;
 }
 
+.contenedor-titulo{
+	background-color: #F4F4F4;
+}
+
+.contenedor_subir{
+	background-image: url('MalonesFondo');
+	background-size: cover;
+	color: #FFFFFF;
+
+}
 
 /*Botones*/
 .btn-default{
@@ -33,11 +44,48 @@ body{
 	color: #FFFFFF;
 }
 
-a{
+.btn-default:hover{
+	background-color: #358262;
 	color: #FFFFFF;
 }
 
+.btn-info{
+	background-color: #914B3E;
+	border-color: #914B3E;
+}
+
+.btn-info:hover{
+	background-color: #7c4035;
+	border-color: #7c4035;
+
+}
+
+.custom-file-input ~ .custom-file-label::after {
+    content: "Subir archivo...";
+}
+
+/*Hipervinculos*/
+.page-link{
+	color: #914B3E;
+}
+
+.page-link:hover{
+	color: #7e4035;
+}
+
+a{
+	color: #3E916E;
+}
+
 a:hover{
+	color: #347C5E;
+}
+
+.btn a{
+	color: #FFFFFF;
+}
+
+.btn a:hover{
     color: #E7F4EE;
 
 }
@@ -46,6 +94,11 @@ a:hover{
 	color: #3E916E;
 	font-size: 0.9rem;
 	font-weight: 900;
+}
+
+/*Icono*/
+.color-icono{
+	color: #347C5E;
 }
 
 /*Footer*/
